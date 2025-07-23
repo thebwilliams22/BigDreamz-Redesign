@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+:root{
+    --primary-color: #b32557;
+    --white: #ffffff;
+    --max-width: 1200px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    font-family: "Fredoka", sans-serif;
+    background-image: url(../images/IMG_1085.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    max-width: var(--max-width);
+    margin: auto;
+}
+nav{
+    padding: 2rem 1rem;
+    overflow: hidden;
+}
+.nav__links{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.nav__links > div li:not(:first-child){
+    display: none;
+}
+.nav__links img{
+    max-width: 50px;
+}
+.nav__links a{
+    position: relative;
+    isolation: isolate;
+    padding-bottom: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--white);
+}
+.nav__links a::after{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: var(--white);
+    transition: 0.3s;
+}
+.nav__links a:hover::after{
+    width: 100%;
+}
+
+@media (width > 768px){
+    .nav__links > div li:not(:first-child){
+        display: block;
+    }
+
+    .nav__links > div{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+}
