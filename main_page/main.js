@@ -28,7 +28,7 @@ ScrollReveal().reveal(".nav__links li", {
     delay: 2000,
 });
 
-ScrollReveal.reveal(".socials a", {
+ScrollReveal().reveal(".socials a", {
     duration: 1000,
     interval: 500,
     delay: 4000,
