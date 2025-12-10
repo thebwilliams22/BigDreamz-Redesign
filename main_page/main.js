@@ -33,3 +33,9 @@ ScrollReveal().reveal(".socials a", {
     interval: 500,
     delay: 4000,
 });
+ScrollReveal().reveal(".about__section h3, .about__section h1, .about__section .about__text, .about__section .about__btn", {
+    ...scrollRevealOption,
+    origin: "bottom",
+    interval: 150,   // stagger the elements a little
+    delay: 2000      // start after the hero animations finish
+});

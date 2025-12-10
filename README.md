@@ -9,3 +9,8 @@ A remake of the portfolio i had before, but turning it into a more modernized we
 #### July 23, 2025
 1. Created "coming soon" page to be used to times when the website is undergoing changes
 2. Started the process of creating the main landing page for the website. 
+
+#### December 10, 2025
+1. Completed addition of about section
+2. Started implementation of sports section cards for sports related 
+services
