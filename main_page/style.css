@@ -11,6 +11,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 body{
     min-height: 100vh;
@@ -21,6 +24,7 @@ body{
     background-size: cover;
     background-attachment: fixed;
 }
+
 .container{
     min-height: 100vh;
     display: flex;
@@ -309,6 +313,283 @@ nav{
     transform: scale(1.08);
 }
 
+/* -------------------------------------------------
+GRAPHIC DESIGN – carousel container
+------------------------------------------------- */
+.graphics-container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    max-width: var(--max-width);
+    margin: auto;
+    overflow: hidden;
+}
+
+.graphics__section h1{
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--white);
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px var(--white);
+    line-height: 4rem;
+    margin-bottom: 3rem;
+    text-align: left;
+}
+
+.carousel{
+    position: relative;
+    max-width: 900px;           /* limit width on large screens */
+    margin: 0 auto 2rem;
+    overflow: visible;
+}
+
+/* Slides wrapper – flex to line‑up slides side‑by‑side */
+.slides{
+    display:flex;
+    transition:transform .5s ease;   /* slide movement */
+    will-change:transform;
+}
+
+/* Individual slide */
+.slide{
+    min-width:100%;          /* 100% of carousel width */
+    pointer-events:none;
+    opacity:0;
+    transition:opacity .4s ease;
+}
+.slide.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Image styling – keep the same aspect ratio as your sports cards */
+.slide img{
+    width: 100%;
+    height: auto;
+    border-radius: .5rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+}
+.arrow{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--white);
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,.2);
+    transition: background .3s, transform .2s;
+    z-index: 2;
+}
+.arrow:hover{
+    background: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-50%) scale(1.07);
+}
+.arrow--left{
+    left: -24px;          /* half‑outside the carousel for a “peeking” look */
+}
+.arrow--right{
+    right: -24px;
+}
+
+.graphic__info{
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: .5rem;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+    color: #333;
+}
+.graphic__info h4{
+    margin-bottom: .75rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+.graphic__info p{
+    font-size: 1rem;
+    line-height: 1.6;
+}
+/* -------------------------------------------------
+SKILLZ SECTION
+------------------------------------------------- */
+.skillz-container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    max-width: var(--max-width);
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Section title – same stroke‑text style as hero/about */
+.skillz__section h1{
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--white);
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px var(--white);
+    line-height: 4rem;
+    margin-bottom: 2.5rem;
+    text-align: left;
+}
+.skillz__section::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.4);   /* darken the hero image a bit */
+    z-index:-1;
+}
+
+/* Flex wrapper */
+.skillz__content{
+    display: flex;
+    flex-direction: column;            /* stack on mobile */
+    gap: 1.5rem;
+    align-items: center;               /* center image on small screens */
+}
+
+/* Portrait image */
+.skillz__img{
+    flex: 0 0 auto;
+    max-width: 250px;                  /* portrait width on larger screens */
+}
+.skillz__img img{
+    width: 100%;
+    height: auto;
+    border-radius: .5rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+}
+
+/* Description block */
+.skillz__desc{
+    flex: 1;
+    max-width: 720px;
+    color: #fff;
+    text-align: left;
+}
+.skillz__desc h4{
+    margin-bottom: .5rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+.skillz__desc p{
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Optional extra area (button, list, etc.) */
+.skillz__extra{
+    margin-top: .5rem;
+}
+
+/* Button – matches the style you already used for the “OUR OFFER” button */
+.skillz__btn{
+    display: inline-flex;
+    align-items: center;
+    gap: .75rem;
+    padding: .75rem 1.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white);
+    background-color: transparent;
+    border: 2px solid var(--white);
+    border-radius: .25rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color .3s, color .3s;
+}
+.skillz__btn:hover{
+    background-color: var(--white);
+    color: var(--primary-color);
+}
+.skillz__btn span{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .25rem .5rem;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    background-color: var(--white);
+    border-radius: 50%;
+}
+/* -------------------------------------------------
+   BOOK WITH ME – button style (same look as other CTA buttons)
+   ------------------------------------------------- */
+/* center everything inside the section */
+.book__section{
+    display:flex;
+    flex-direction:column;
+    align-items:center;          /* horizontal centering */
+    justify-content:center;     /* vertical centering when the container has height */
+    text-align:center;          /* text inside headings / paragraphs */
+    min-height:80vh;            /* give it some height so content is vertically centered */
+}
+
+/* huge heading */
+.book__section h1{
+    font-size:6rem;            /* ~96 px */
+    font-weight:700;
+    color:var(--white);
+    -webkit-text-fill-color:var(--white);
+    -webkit-text-stroke:2px var(--white);
+    margin-bottom:2rem;
+}
+
+/* BIG button – keep the same visual language */
+.book__btn{
+    display:inline-flex;
+    align-items:center;
+    gap:1rem;
+    padding:1.25rem 2rem;      /* larger clickable area */
+    font-size:1.75rem;         /* ~28 px */
+    font-weight:600;
+    color:var(--white);
+    background-color:transparent;
+    border:2px solid var(--white);
+    border-radius:.5rem;
+    cursor:pointer;
+    text-decoration:none;
+    transition:background-color .3s, color .3s;
+}
+.book__btn:hover{
+    background-color:var(--white);
+    color:var(--primary-color);
+}
+.book__btn span{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:.35rem .6rem;
+    font-size:1.5rem;
+    color:var(--primary-color);
+    background-color:var(--white);
+    border-radius:50%;
+}
+
+/* Optional – give the whole section a dark overlay like the other sections */
+.book-container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    max-width: var(--max-width);
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+
+}
 
 /* -------------------------------------------------
              MEDIA SECTION
@@ -328,6 +609,25 @@ nav{
     .sports__section h1{
         font-size: 5.5rem;
         line-height: 5.5rem;
+    }
+    .graphics__section h1{
+        font-size: 5.5rem;
+        line-height: 5.5rem;
+    }
+    .skillz__section h1{
+        font-size: 5.5rem;
+        line-height: 5.5rem;
+    }
+    .skillz__content{
+        flex-direction: row;      /* side‑by‑side on tablets+ */
+        align-items: flex-start;
+    }
+    .book__section h1{
+        font-size:3.5rem;   /* ~56 px */
+    }
+    .book__btn{
+        font-size:1.25rem;  /* ~20 px */
+        padding:1rem 1.5rem;
     }
 }
 
@@ -363,5 +663,24 @@ nav{
     .sports__section h1{
         font-size: 7rem;
         line-height: 7rem;
+    }
+    .graphics-container{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .graphics__section h1{
+        font-size: 7rem;
+        line-height: 7rem;
+    }
+    .skillz-container{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .skillz__section h1{
+        font-size: 7rem;
+        line-height: 7rem;
+    }
+    .book__section h1{
+        font-size:7rem;     /* ~112 px for large desktops */
     }
 }

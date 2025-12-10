@@ -11,6 +11,10 @@ A remake of the portfolio i had before, but turning it into a more modernized we
 2. Started the process of creating the main landing page for the website. 
 
 #### December 10, 2025
-1. Completed addition of about section
-2. Started implementation of sports section cards for sports related 
-services
+1. Completed initial design and implementation of all sections, including
+   2. about section
+   3. graphic design section
+   4. basketball skillz section
+   5. booking contact section
+6.  Next steps: Insert all pictures to replace stand-in images
+7.  Final step will be to publish the new page
