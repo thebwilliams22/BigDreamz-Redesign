@@ -23,4 +23,6 @@ A remake of the portfolio i had before, but turning it into a more modernized we
 1. Finished inserting images
 2. Bigdreamz Redesign of Website completed
 
+Last commit will be to update main to be viewed publicly.
+
 
