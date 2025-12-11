@@ -14,7 +14,6 @@
 html{
     scroll-behavior: smooth;
 }
-
 body{
     min-height: 100vh;
     font-family: "Fredoka", sans-serif;
@@ -24,7 +23,6 @@ body{
     background-size: cover;
     background-attachment: fixed;
 }
-
 .container{
     min-height: 100vh;
     display: flex;
