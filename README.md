@@ -18,3 +18,9 @@ A remake of the portfolio i had before, but turning it into a more modernized we
    5. booking contact section
 6.  Next steps: Insert all pictures to replace stand-in images
 7.  Final step will be to publish the new page
+
+#### December 11,2025
+1. Finished inserting images
+2. Bigdreamz Redesign of Website completed
+
+
