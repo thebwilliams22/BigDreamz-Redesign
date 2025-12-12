@@ -22,8 +22,6 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    will-change: transform;
-    transform: translateZ(0);
 }
 
 
