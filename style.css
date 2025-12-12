@@ -22,15 +22,10 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    will-change: transform;
+    transform: translateZ(0);
 }
 
-/* Disable fixed on touch devices / iOS */
-@media (pointer: coarse), (max-width: 1024px) {
-    body {
-        background-attachment: scroll;
-        background-position: center top;
-    }
-}
 
 .container{
     min-height: 100vh;
