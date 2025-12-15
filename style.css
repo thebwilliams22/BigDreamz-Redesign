@@ -15,13 +15,22 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    min-height: 100vh;
     font-family: "Fredoka", sans-serif;
-    background-image: url(images/ksenia-5tioRKz0Fbw-unsplash.jpg);
+    background-image: url(images/IMG_1085.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+}
+body:after{
+    min-height: 100vh;
+
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: scroll;
 }
 
 
